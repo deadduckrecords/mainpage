@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dead Duck Records</title>
+  <link rel="icon" href="https://i.imgur.com/mXJuHEV.png" type="image/png">
   <style>
     body {
       font-family: sans-serif;
-      background-color: #f3f4f6;
+      background-color: rgb(226, 226, 226);
       color: #111;
       text-align: center;
       padding: 40px 20px;
@@ -19,6 +20,8 @@
     }
 
     table {
+      background-color: rgb(226, 226, 226);
+      width: 480px; /* 20% of a 1200px layout, fixed */
       margin: 0 auto 40px;
       border-collapse: collapse;
     }
@@ -26,21 +29,34 @@
     th, td {
       border: 1px solid #000;
       padding: 10px 15px;
+      font-weight: normal;
     }
 
     th {
-      background-color: #e5e7eb;
+      background-color: rgb(226, 226, 226);
     }
 
     a {
-      color: #000;
+      color: inherit;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     .link-icon {
       height: 16px;
       vertical-align: middle;
       margin-left: 5px;
+    }
+
+    td.title-cell a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    td.title-cell:hover {
+      background-color: #1a1a1a;
+      color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .footer {
@@ -51,6 +67,12 @@
       margin: 0 10px;
       text-decoration: underline;
       cursor: pointer;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #444;
     }
 
     /* Modal styles */
@@ -67,7 +89,7 @@
     }
 
     .modal-content {
-      background-color: #fff;
+      background-color: rgb(226, 226, 226);
       margin: 10% auto;
       padding: 20px;
       border: 1px solid #ccc;
@@ -91,8 +113,8 @@
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Dead Duck Records Logo" class="logo" />
-
+  <img src="https://i.imgur.com/KxoMCsO.png" alt="Dead Duck Records Logo" class="logo" />
+  
   <table>
     <thead>
       <tr>
@@ -103,28 +125,68 @@
     <tbody>
       <tr>
         <td><a href="#">DDR0001</a></td>
-        <td>interstate <a href="https://lnk.to" target="_blank"><img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" /></a></td>
+        <td class="title-cell">
+          <a href="https://push.fm/fl/va-garden" target="_blank">garden
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
       </tr>
       <tr>
         <td><a href="#">DDR0002</a></td>
-        <td>garden <a href="https://lnk.to" target="_blank"><img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" /></a></td>
+        <td class="title-cell">
+          <a href="https://push.fm/fl/theextendedplay" target="_blank">The Extended Play
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
       </tr>
       <tr>
         <td><a href="#">DDR0003</a></td>
-        <td>The Extended Play <a href="https://lnk.to" target="_blank"><img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" /></a></td>
+        <td class="title-cell">
+          <a href="https://push.fm/fl/va-reiterate" target="_blank">reiterate
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
       </tr>
       <tr>
         <td><a href="#">DDR0004</a></td>
-        <td>reiterate <a href="https://lnk.to" target="_blank"><img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" /></a></td>
+        <td class="title-cell">
+          <a href="https://too.fm/advocate-definitive" target="_blank">ADVOCATE
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
       </tr>
       <tr>
         <td><a href="#">DDR0005</a></td>
-        <td>ADVOCATE <a href="https://lnk.to" target="_blank"><img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" /></a></td>
-      </tr>
+        <td class="title-cell">
+          <a href="https://too.fm/legalentity" target="_blank">Legal Entity
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
+      </tr>  
       <tr>
         <td><a href="#">DDR0006</a></td>
-        <td>Legal Entity <a href="https://lnk.to" target="_blank"><img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" /></a></td>
-      </tr>  
+        <td class="title-cell">
+          <a href="https://ffm.to/stun" target="_blank">Stun
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td><a href="#">DDR0007</a></td>
+        <td class="title-cell">
+          <a href="https://ffm.to/fa-superhero" target="_blank">superhero
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
+      </tr>		
+      <tr>
+        <td><a href="#">DDR0008</a></td>
+        <td class="title-cell">
+          <a href="https://ffm.to/aimfire" target="_blank">AIM+FIRE
+            <img src="https://phzle.com/wp-content/uploads/2025/03/link-2-0-00-00-00.png" alt="Link" class="link-icon" />
+          </a>
+        </td>
+      </tr>		  
     </tbody>
   </table>
 
@@ -132,6 +194,10 @@
     <a href="mailto:contact@deadduckrecords.uk">Contact</a> |
     <a onclick="document.getElementById('privacyModal').style.display='block'">Privacy</a>
   </div>
+
+  <footer>
+    © <span id="year"></span> Dead Duck Records
+  </footer>
 
   <!-- Modal -->
   <div id="privacyModal" class="modal" onclick="event.target === this && (this.style.display='none')">
@@ -144,5 +210,9 @@
     </div>
   </div>
 
+  <!-- Auto-update year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
